@@ -1,11 +1,37 @@
-<!DOCTYPE html>
-<html>
+<!-- title : main.html -->
+<!-- discription -->
+<!-- main page html code -->
+<!-- history -->
+<!-- 20190927   0.0.0   초안 작성   김한동 -->
+
+<!-- :: TODO :: -->
+<!-- 화면 구성 요소들에 css 작성하기(개별 파일로) -->
+<!-- 아직 서버가 없기 때문에 정해진 id, pw를 입력했을 때 다음 페이지로 넘어갈 수 있도록, 회원가입, id/pw찾기는 비활성화 -->
+
+<html lang="en">
     <head>
-        <title>Hello, level 1</title>
-        <style></style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login Page</title>
+        <style>
+            div {
+                text-align:center;
+            }
+        </style>
         <script></script>
     </head>
     <body>
-        <h1>Hello, level 1</h1>
+        <div id="title"><h1>Welcome to my system</h1></div>
+        <hr><br>
+        <div id="login">ID : 
+            <input type="text" name="id" placeholder="Enter Your Id">
+        </div>
+        <div id="password">Password : 
+            <input type="text" name="password" placeholder="Enter Your password">
+        </div>
+        <button type="submit">login</button>
+        <button type="submit">회원가입</button>
+        <button type="submit">ID/PW 찾기</button>
     </body>
 </html>
