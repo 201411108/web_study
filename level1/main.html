@@ -3,11 +3,12 @@
 <!-- main page html code -->
 <!-- history -->
 <!-- 20190927   0.0.0   초안 작성   김한동 -->
-<!-- 20190929   0.1.0   시간에 따른 자동 다크모드 추가  김한동-->
+<!-- 20190929   0.1.0   시간에 따른 자동 다크모드 추가, 임시 로그인 기능 활성화  김한동-->
+<!-- 20190929   0.2.0   로그인 시 페이지 넘어가기 초기 기능 구현    김한동 -->
 
 <!-- :: TODO :: -->
 <!-- 화면 구성 요소들에 css 작성하기(개별 파일로) -->
-<!-- 아직 서버가 없기 때문에 정해진 id, pw를 입력했을 때 다음 페이지로 넘어갈 수 있도록, 회원가입, id/pw찾기는 비활성화 -->
+<!-- 45 line, 57 ~ 62 lines : form 태그로 하나로 정리하고 submit 방식으로 페이지 이동 구현-->>
 
 <html lang="en">
     <head>
@@ -38,13 +39,14 @@
                 const id = document.getElementsByName('id')[0].value;
                 const pw = document.getElementsByName('password')[0].value;
 
+                // TODO :: 다음 페이지로 넘어가도록 설정
                 if(id == "test" && pw == "test") {
-                    console.log(id);
-                    console.log(pw);
                     alert("login access");
+                    location.href="afterlogin.html";
+                    // document.id.action="afterlogin.html";
+                    // document.id.submit();
+
                 } else {
-                    console.log(id);
-                    console.log(pw);
                     alert("login fail");
                 }
             }
