@@ -5,10 +5,10 @@
 <!-- 20190927   0.0.0   초안 작성   김한동 -->
 <!-- 20190929   0.1.0   시간에 따른 자동 다크모드 추가, 임시 로그인 기능 활성화  김한동-->
 <!-- 20190929   0.2.0   로그인 시 페이지 넘어가기 초기 기능 구현    김한동 -->
+<!-- 20190930   0.3.0   form 태그로 id, pw 통합 완료, 서버 사이드 구현 필요     김한동-->
 
 <!-- :: TODO :: -->
-<!-- 화면 구성 요소들에 css 작성하기(개별 파일로) -->
-<!-- 45 line, 57 ~ 62 lines : form 태그로 하나로 정리하고 submit 방식으로 페이지 이동 구현-->>
+<!-- css, javascript 개별 파일로 분할하기 -->
 
 <html lang="en">
     <head>
@@ -17,7 +17,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Login Page</title>
         <style>
-            div {
+            form {
+                text-align:center;
+            }
+            #title {
                 text-align:center;
             }
         </style>
@@ -42,10 +45,8 @@
                 // TODO :: 다음 페이지로 넘어가도록 설정
                 if(id == "test" && pw == "test") {
                     alert("login access");
-                    location.href="afterlogin.html";
-                    // document.id.action="afterlogin.html";
-                    // document.id.submit();
-
+                    // location.href="afterlogin.html";
+                    document.getElementById("loginfunction").submit();
                 } else {
                     alert("login fail");
                 }
@@ -55,13 +56,16 @@
     <body onload="setDarkMode();">
         <div id="title"><h1>Welcome to my system</h1></div>
         <hr><br>
-        <div id="login">ID : 
-            <input type="text" name="id" placeholder="Enter Your Id">
-        </div>
-        <div id="password">Password : 
-            <input type="text" name="password" placeholder="Enter Your password">
-        </div>
-        <button type="submit" onclick="loginChecker()">login</button>
+        <form action="afterlogin.html" method="POST" id="loginfunction">
+            <div id="login">ID : 
+                <input type="text" name="id" placeholder="Enter your ID">
+            </div>
+            <div id="password">PW : 
+                <input type="text" name="password" placeholder="Enter Your password">
+            </div>
+            <br>
+            <input type="button" onclick="loginChecker()" value="login">
+        </form>
         <button type="submit">회원가입</button>
         <button type="submit">ID/PW 찾기</button>
     </body>
