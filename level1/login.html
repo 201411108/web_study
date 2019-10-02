@@ -7,10 +7,10 @@
 <!-- 20190929   0.2.0   로그인 시 페이지 넘어가기 초기 기능 구현    김한동 -->
 <!-- 20190930   0.3.0   form 태그로 id, pw 통합 완료, 서버 사이드 구현 필요     김한동 -->
 <!-- 20191001   0.4.0   css, javascript 파일 분할, 파일 이름 변경(main -> login)    김한동 -->
+<!-- 20191002   0.4.1   회원가입, ID/PW 찾기 화면 이동  김한동 -->
 
 <!-- :: TODO :: -->
 <!-- css : 그리드 적용 -->
-<!-- javascript : 회원가입, id/pw 페이지 이동 구현 -->
 <!-- header, footer 설정 -> UI 디자인 서류 작성 -->
 
 <html lang="en">
@@ -27,7 +27,7 @@
 
     </head>
     <body onload="setDarkMode()">
-        {% comment %} <header></header> {% endcomment %}
+        <!-- <header></header> -->
         <div id="title"><h1>Welcome to my system</h1></div>
         <hr><br>
         <form action="selectledger.html" method="POST" id="loginfunction">
@@ -40,8 +40,8 @@
             <br>
             <input type="button" onclick="login()" value="login">
         </form>
-        <button type="submit" onclick="alert('회원가입 버튼')">회원가입</button>
-        <button type="submit" onclick="alert('ID/PW 찾기 버튼')">ID/PW 찾기</button>
-        {% comment %} <footer></footer> {% endcomment %}
+        <button type="submit" onclick="moveToRegister()">회원가입</button>
+        <button type="submit" onclick="moveToFind()">ID/PW 찾기</button>
+        <!-- <footer></footer> -->
     </body>
 </html>
