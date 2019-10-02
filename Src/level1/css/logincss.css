@@ -1,0 +1,15 @@
+/* logincss.css */
+/* discription */
+/* 로그인 페이지에 적용되는 css 파일 */
+/* history */
+/* 20191001    0.0.0   html 코드와 분할    김한동 */
+
+/* :: TODO :: */
+/* grid 적용 */
+
+form {
+    text-align:center;
+}
+#title {
+    text-align:center;
+}
