@@ -1,14 +1,19 @@
-# MyToyFullStack
-only front-end to full stack
+# web_study
 
-## level 0. topic
-웹의 용도를 사전에 정의
+repository for my web programming study
 
-## level 1. only front-end web until Oct.
-html, css, javascript으로 필요한 최소한의 기능을 구현
+## 1. Vue.js
 
-## level 2. backend using node.js until Nov.
-node.js를 학습하며 서버 동작 구현
+about vue.js study codes.
 
-## level 3. use front-end framework(vue or angular)
-미정
+the book info will be updated.
+
+## 2. Node.js
+
+about node.js study codes. -> it will be updated soon.
+
+## 3. Side project
+
+27th, Jan, 2020 ~ 14th, Feb, 2020
+
+It may be consisted of vue.js and bootstrap.

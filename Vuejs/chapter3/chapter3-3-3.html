@@ -1,0 +1,37 @@
+<!-- 같은 레벨의 컴포넌트 데이터 통신하기, 이벤트 버스 -->
+<!-- 20191228 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EventBus</title>
+    </head>
+    <body>
+        <div id="app">
+            <child-component></child-component>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            // 이벤트 버스 인스턴스 생성
+            var eventBus = new Vue();
+            // 자식 컴포넌트
+            Vue.component('child-component', {
+                template: '<div>하위 컴포넌트 영역입니다.<button v-on:click="showLog">show</button></div>',
+                methods: {
+                    showLog: function() {
+                        // 이벤트 버스의 emit을 구현, triggerEventBus를 발생시키고 데이터에 100 전송 준비
+                        eventBus.$emit('triggerEventBus', 100);
+                    }
+                },
+            });
+
+            new Vue({
+                el: '#app',
+                created: function() {
+                    eventBus.$on('triggerEventBus', function(value) {
+                        console.log("전달 받은 값 : ", value);
+                    });
+                },
+            });
+        </script>
+    </body>
+</html>

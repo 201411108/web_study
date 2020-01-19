@@ -1,0 +1,36 @@
+<!-- 뷰 인스턴스 라이프 사이클과 라이프 사이클 훅 -->
+<!-- 20191227 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue Sample</title>
+    </head>
+    <body>
+        <div id="app">
+            {{message}}
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello Vue.js!'
+                },
+                 // vue lifecycle hook
+                 beforeCreate: function() {
+                    console.log("beforeCreate")
+                },
+                created: function() {
+                    console.log("Created")
+                },
+                mounted: function() {
+                    console.log("Mounted")
+                    this.message = 'Mount Vue.js, it will start update!'
+                },
+                updated: function() {
+                    console.log("Updated")
+                },
+            });
+        </script>
+    </body>
+</html>

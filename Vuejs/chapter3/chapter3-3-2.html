@@ -1,0 +1,38 @@
+<!-- 하위 컴포넌트에서 상위 컴포넌트로 이벤트 전달하기, $emit(), v-on: -->
+<!-- 20191228 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>$emit, v-on</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- v-on 속성을 활용해서 하위 컴포넌트에서 발생시킨 이벤트 수신, 해당하는 메소드 호출 -->
+            <child-component v-on:show-log="printText"></child-component>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            // 전역 컴포넌트 등록
+            Vue.component('child-component', {
+                template: '<button v-on:click="showLog">show</button>',
+                methods: {
+                    showLog: function() {
+                        this.$emit('show-log');
+                    }
+                },
+            });
+
+            new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello, Parent Component data'
+                },
+                methods: {
+                    printText: function() {
+                        console.log("received an event");
+                    }
+                },
+            });
+        </script>
+    </body>
+</html>

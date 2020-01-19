@@ -1,0 +1,49 @@
+<!-- 뷰 라우터 -->
+<!-- 20200101 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>View Router</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>뷰 라우터 예제</h1>
+            <p>
+                <!-- 클릭 시 해당 경로로 라우팅이 이루어짐 -->
+                <router-link to='/main'>Main 컴포넌트로 이동</router-link>
+                <router-link to='/login'>Login 컴포넌트로 이동</router-link>
+            </p>
+            <!-- 변경되는 URL 값에 따라 보여지는 뷰 -->
+            <router-view></router-view>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+        <script>
+            var Main = {
+                template: '<div>main</div>'
+            };
+            var Login = {
+                template: '<div>login</div>'
+            };
+
+            // 경로에 맞춰 표시할 컴포넌트 지정
+            var routes = [
+                {path: "/main", component: Main},
+                {path: "/login", component: Login},
+            ];
+            
+            // 라우터 등록
+            var router = new VueRouter({
+                routes
+            });
+
+            // 뷰 인스턴스에 라우터 추가
+            var app = new Vue({
+                // el: '#app',
+                router
+            }).$mount('#app'); // 공식 문서에서 안내하는 방법
+        </script>
+    </body>
+</html>

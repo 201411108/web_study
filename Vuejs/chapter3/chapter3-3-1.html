@@ -1,0 +1,29 @@
+<!-- 상위 컴포넌트에서 하위 컴포넌트의 데이터 사용하기, props -->
+<!-- 20191228 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Props</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- v-bind 속성을 사용해서 상위 컴포넌트의 데이터를 propsdata에 할당 -->
+            <child-component v-bind:propsdata="message"></child-component>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            // 전역 컴포넌트 등록
+            Vue.component('child-component', {
+                props: ['propsdata'],
+                template: '<p>{{propsdata}}</p>'
+            });
+
+            new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello, Parent Component data'
+                },
+            });
+        </script>
+    </body>
+</html>
