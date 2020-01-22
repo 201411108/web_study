@@ -1,0 +1,44 @@
+<!-- computed -->
+<!-- 20200123 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>computed</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- 뷰 인스턴스 생성 공간 -->
+            <p>{{message}}</p>
+            <p>{{reversedMsg}}</p>
+            <button v-on:click="reverseMsg">문자열 역순 출력</button>
+        </div>
+
+        <!-- 필요한 라이브러리 CDN 방식 호출 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            // 실습 코드 작성
+            new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello Vue.js!',
+                },
+                methods: {
+                    // methods 형태로 할 경우에는 해당 동작이 실행할 때만 수행
+                    reverseMsg: function() {
+                        this.message = this.message.split('').reverse().join('')
+                        return this.message
+                    }
+                },
+                computed: {
+                    // 값이 변경될 때마다 자동으로 수행
+                    reversedMsg: function() {
+                        return this.message.split('').reverse().join('')
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
