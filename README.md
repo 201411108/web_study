@@ -6,7 +6,7 @@ repository for my web programming study
 
 about vue.js study codes.
 
-the book info will be updated.
+Ref : Do it! Vue.js 입문, 이지스 퍼블리싱
 
 ## 2. Node.js
 
