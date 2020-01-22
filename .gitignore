@@ -1,6 +1,8 @@
 # .DS_Store
 .DS_Store
 
+package-lock.json
+
 # Created by https://www.gitignore.io/api/visualstudiocode
 # Edit at https://www.gitignore.io/?templates=visualstudiocode
 
