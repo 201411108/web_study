@@ -4,14 +4,14 @@
         <transition-group name="list" tag="ul">
             <li v-for="(todoItem, index) in propsdata" v-bind:key="todoItem" class="shadow">
                 <i class="checkBtn fas fa-check" aria-hidden="true"></i>
-                <span v-on:click="startEdit">{{ todoItem }}</span>
+                <!-- startEdit에서 todoItem의 index를 modal로 넘겨주면 될듯! -->
+                <span v-on:click="startEdit(index)">{{ todoItem }}</span>
                 <span class="removeBtn" type="button" v-on:click="removeTodo(todoItem, index)">
                     <i class="far fa-trash-alt" aria-hidden="true"></i>
                 </span>
             </li>
         </transition-group>
 
-        <!-- 수정 모달 추가 -->
         <modal v-if="showModal" v-on:close="showModal = false">
             <!-- 모달 헤더 -->
             <h3 slot="header">수정</h3>
@@ -32,8 +32,9 @@ import Modal from './common/Modal.vue'
 export default {
     data() {
         return {
+            index: 0,
             editTodoItem: '',
-            showModal: false
+            showModal: false,
         }
     },
     props: ['propsdata'],
@@ -41,13 +42,25 @@ export default {
         removeTodo(todoItem, index) {
             this.$emit('removeTodo', todoItem, index)
         },
-        startEdit() {
+        startEdit(index) {
             this.showModal = !this.showModal
+            this.index = index
         },
         editTodo() {
-            var value = this.editTodoItem && this.editTodoItem.trim()
-            this.$emit('editTodo', value)
+            if(this.editTodoItem != "") {
+                var value = this.editTodoItem && this.editTodoItem.trim()
+                var index = this.index
+                // value랑 index만 보내서 app 인스턴스에서 index 값으로 수정하도록!
+                this.$emit('editTodo', value, index)
+                this.showModal = !this.showModal
+                this.clearInput()
+            } else {
+                alert('수정할 내용을 입력하세요!')
+            }  
+        },
+        clearInput() {
             this.editTodoItem = ''
+            this.index = 0
         }
     },
     components: {

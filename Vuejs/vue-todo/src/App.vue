@@ -43,9 +43,12 @@ export default {
       localStorage.removeItem(todoItem)
       this.todoItems.splice(index, 1)
     },
-    editTodo(todoItem) {
-      // TODO :: 넘겨온 것을 받아서 수정해야 하는데... 어떻게 수정해야 할까?
-      alert(todoItem)
+    editTodo(editItem, index) {
+      // index 값과 수정할 내용을 넘겨 받아서 내용 수정
+      // alert('수정 내용: ' + editItem + '\n원본 내용: ' + this.todoItems[index] + ', 인덱스 값 : ' + index)
+      // TODO :: 새로고침 했을 때 key 값이 아닌 value 값을 가져올 수 있도록 변경
+      localStorage.setItem(this.todoItems[index], editItem)
+      this.todoItems[index] = editItem
     }
   },
   // 컴포넌트 등록
