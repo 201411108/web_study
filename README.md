@@ -16,4 +16,4 @@ about node.js study codes. -> it will be updated soon.
 
 27th, Jan, 2020 ~ 14th, Feb, 2020
 
-It may be consisted of vue.js and bootstrap.
+init project
