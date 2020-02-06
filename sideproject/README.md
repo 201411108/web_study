@@ -1,5 +1,33 @@
 # sideproject
 
+
+## Abstract
+
+치과기공 거래명세 관리 페이지
+
+### Project composition
+
+App
+
+|-PageTitle
+
+|
+
+|-PageBody
+
+  |-MonthlyIncome
+
+  |-TransactionalRecord
+
+  |-Account
+
+|
+
+|-PageFooter
+
+
+---
+
 ## Project setup
 ```
 npm install
