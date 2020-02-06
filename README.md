@@ -16,4 +16,17 @@ about node.js study codes. -> it will be updated soon.
 
 27th, Jan, 2020 ~ 14th, Feb, 2020
 
-init project
+### project structure
+
+sideproject
+```
+App
+|-PageTitle                 : 메뉴항목 표시
+|
+|-PageBody                  : 컨텐츠 표시
+  |-MonthlyIncome           : 월별 수입 표시
+  |-TransactionalRecord     : 거래대장 표시
+  |-Account                 : 거래명세서 표시
+|
+|-PageFooter                : footer
+```
