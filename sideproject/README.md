@@ -6,14 +6,14 @@
 
 ```
 App
-|-PageTitle
+|-PageTitle                 : 메뉴항목 표시
 |
-|-PageBody
-  |-MonthlyIncome
-  |-TransactionalRecord
-  |-Account
+|-PageBody                  : 컨텐츠 표시
+  |-MonthlyIncome           : 월별 수입 표시
+  |-TransactionalRecord     : 거래대장 표시
+  |-Account                 : 거래명세서 표시
 |
-|-PageFooter
+|-PageFooter                : footer
 ```
 
 ---
