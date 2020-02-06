@@ -4,20 +4,23 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <PageTitle></PageTitle>
     <PageBody></PageBody>
+    <PageFooter></PageFooter>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import PageTitle from './components/PageTitle.vue'
 import PageBody from './components/PageBody.vue'
+import PageFooter from './components/PageFooter.vue'
 
 export default {
   name: 'app',
   components: {
     // HelloWorld,
     PageTitle,
-    PageBody
+    PageBody,
+    PageFooter
   }
 }
 </script>
