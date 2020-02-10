@@ -16,6 +16,18 @@ App
 |-PageFooter                : footer
 ```
 
+### TODO works
+
+1. write excelFileReader.js
+
+2. add functions for each components : parse needed information at each component
+
+3. deals exceptions
+
+* Me : make js file for excel reading
+
+* Bro : consists each component layout
+
 ---
 
 ## Project setup
