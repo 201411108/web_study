@@ -18,15 +18,13 @@ App
 
 ### TODO works
 
-1. write excelFileReader.js
+* Me : make js file for excel writing and writing parts
 
-2. add functions for each components : parse needed information at each component
+엑셀로 굳이 만들 필요 없이 거래 명세서와 거래 대장을 출력하게 하면 되지 않을까?
 
-3. deals exceptions
+근데 엑셀로 만들 필요는 있다. 기록을 남기기 위해서?
 
-* Me : make js file for excel reading
-
-* Bro : consists each component layout
+* Bro : consists each component layout -> get data from excel files
 
 ---
 
