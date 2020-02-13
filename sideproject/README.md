@@ -6,25 +6,13 @@
 
 ```
 App
-|-PageTitle                 : 메뉴항목 표시
-|
-|-PageBody                  : 컨텐츠 표시
-  |-MonthlyIncome           : 월별 수입 표시
-  |-TransactionalRecord     : 거래대장 표시
-  |-Account                 : 거래명세서 표시
-|
-|-PageFooter                : footer
+|-MonthlyIncome               : 월별 수입 표시(최근 5개 항목)
+  |-MonthlyIncomeDetail       : 전체 월별 수입 표시(/monthlyincome)
+|-TransactionalRecord         : 거래대장 표시(최근 5개 항목)
+  |-TransactinalRecordDetail  : 전체 거래 대장 표시(/transactionalrecord)
+  |-Account                   : 거래 명세서 표시, 거래 대장에서 1개 항목 클릭 시 세부 거래 명세서 표시(/account/:id)
+|-PageFooter                  : footer
 ```
-
-### TODO works
-
-* Me : make js file for excel writing and writing parts
-
-엑셀로 굳이 만들 필요 없이 거래 명세서와 거래 대장을 출력하게 하면 되지 않을까?
-
-근데 엑셀로 만들 필요는 있다. 기록을 남기기 위해서?
-
-* Bro : consists each component layout -> get data from excel files
 
 ---
 
