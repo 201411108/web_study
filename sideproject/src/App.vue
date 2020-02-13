@@ -4,6 +4,7 @@
     <!-- <PageTitle></PageTitle> -->
     <!-- PageTitle 대신 nav 바로 대체 -->
     <div id="nav">
+      <router-link to="/">Home</router-link> | 
       <router-link to="/monthlyincome">Monthly Income</router-link> | 
       <router-link to="/transactionalrecord">TransActinal Record</router-link>
     </div>
