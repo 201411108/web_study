@@ -18,6 +18,8 @@ App
 
 ## project start
 
+package.json, package-lock.json 파일 다운로드 필요
+
 ### Project setup
 ```
 npm install
