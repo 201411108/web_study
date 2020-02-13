@@ -1,7 +1,9 @@
 <template>
-    <div>
-        This is Page Footer!
-    </div>    
+    <footer>
+        <div class="container-fluid">
+            Copyright 2020. firsteast&khs. all rights reserved.
+        </div>
+    </footer>    
 </template>
 
 <script>
