@@ -98,6 +98,8 @@ CDN 방식으로 Vue를 사용하는 방법과 기본 뷰 인스턴스 실습
 
 html 코드에서 뷰 인스턴스의 속성들을 사용할 수 있는 vue directives
 
+* 코드 보기
+
     [chapter5/directive.html](https://github.com/201411108/web_study/blob/master/Vuejs/Vue%20Basic%20Book/chapter5/directive.html)
 
     [chapter5/event.html](https://github.com/201411108/web_study/blob/master/Vuejs/Vue%20Basic%20Book/chapter5/event.html)
