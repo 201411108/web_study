@@ -1,20 +1,34 @@
 # web_study
 
-repository for my web programming study
+Front-end framework 학습 Repository
+
+학습 주제 : Vue.js
+
+기간 : 14th, Jan ~ 
 
 ## 1. Vue.js
 
-about vue.js study codes.
+Vue.js 학습
+
+### 1-1. Vue Basic Book
+
+Ref 책 내용을 따라가며 학습한 내용 정리
 
 Ref : Do it! Vue.js 입문, 이지스 퍼블리싱
 
-## 2. Node.js
+### 1-2. 30days
 
-about node.js study codes. -> it will be updated soon.
+1-1에서 학습한 내용을 또 다른 Ref pdf 자료를 참고하며 다시 정리
 
-## 3. Side project
+Ref : thirty-days-of-vue-fullstackio, newline.co
 
-27th, Jan, 2020 ~ 14th, Feb, 2020
+## 2. Side project
+
+배운 내용을 토대로 한 사이드 프로젝트 진행
+
+주제 : 거래 내용 기록 페이지 제작
+
+27th, Jan, 2020 ~ 16th, Mar, 2020
 
 ### project structure
 
