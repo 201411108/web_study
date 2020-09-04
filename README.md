@@ -6,7 +6,7 @@ from vanilla JS to React
 
 1. VanillaJS
 
-2020. 09. 04. ~ 
+2020.09.04. ~ 
 
   * Original source : https://github.com/nomadcoders/js-basics
   
