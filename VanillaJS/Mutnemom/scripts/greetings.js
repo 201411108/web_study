@@ -5,16 +5,10 @@ const greetings = document.querySelector(".js-greetings");
 let USER_NAME = "user";
 let SHOWING = "showing";
 
-const showGreetings = (text) => {
-  form.classList.remove(SHOWING);
-  greetings.classList.add(SHOWING);
-  greetings.innerText = `Hello ${text}`;
-}
-
 const handleSubmit = (event) => {
   event.preventDefault();
   const currentValue = input.value;
-  
+
   localStorage.setItem(USER_NAME, currentValue);
   showGreetings(currentValue);
 }
@@ -24,7 +18,13 @@ const getUserName = () => {
   form.addEventListener("submit", handleSubmit);
 }
 
-function init() {
+const showGreetings = (text) => {
+  form.classList.remove(SHOWING);
+  greetings.classList.add(SHOWING);
+  greetings.innerText = `Hello ${text}`;
+}
+
+const loadName = () => {
   const user_name = localStorage.getItem(USER_NAME);
   if(user_name === null) {
     // set user name
@@ -33,6 +33,10 @@ function init() {
     // show user name
     showGreetings(user_name);
   }
+}
+
+function init() {
+  loadName();
 }
 
 init();
