@@ -1,10 +1,6 @@
-// REFACTOR :: js-clock 내 태그 변경 시 바뀌지 않도록 해야 함
-const H1_CLOCK = 0;
-const H3_CLOCK = 1;
-
 const clockContainer = document.querySelector(".js-clock");
-const clockTitle = clockContainer.children[H1_CLOCK];
-const dateTitle = clockContainer.children[H3_CLOCK];
+const clockTitle = clockContainer.querySelector("h1");
+const dateTitle = clockContainer.querySelector("h3");
 
 const dayConvertor = (dayOfWeek) => {
   let days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
