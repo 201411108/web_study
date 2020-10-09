@@ -1,6 +1,6 @@
 # web_study
 
-from vanilla JS to React
+from vanilla JS 
 
 ## Contents
 
